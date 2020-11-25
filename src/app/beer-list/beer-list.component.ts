@@ -12,9 +12,10 @@ export class BeerListComponent implements OnInit {
     nombre: "Orange",
     tipo:"AAA",
     precio: 120,
-    stock: 20,
+    stock: 5,
     image:"assets/img/orange.png",    
     oferta: false,
+    cantidad: 0,
   },
   {
     nombre: "Mandarin",
@@ -23,6 +24,7 @@ export class BeerListComponent implements OnInit {
     stock: 30,
     image:"assets/img/orange.png", 
     oferta: true,
+    cantidad: 0,
   },
   {
     nombre: "Irish",
@@ -31,14 +33,29 @@ export class BeerListComponent implements OnInit {
     stock:0,
     image:"assets/img/orange.png",
     oferta: false,
+    cantidad: 0,
   },
 ];
-
-
 
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  upCantidad(beer: Beer): void{
+    if (beer.cantidad < beer.stock) 
+      beer.cantidad++;
+    
+   
+
+  }
+
+  downCantidad(beer: Beer): void{
+    if(beer.cantidad >0 )
+    beer.cantidad--;
+
+  }
+
+  
 
 }

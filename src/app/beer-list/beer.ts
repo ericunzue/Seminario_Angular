@@ -5,5 +5,6 @@ export interface Beer{
     stock: number;
     image: string;
     oferta: boolean;
+    cantidad: number;
 
 }
