@@ -18,8 +18,12 @@
             <td>{{beer.precio | currency}}</td>
             <td><span class="badge badge-secondary" *ngIf="beer.stock==0">Sin Stock</span></td>
             <td>
-                <app-input-integer [(cantidad)]="beer.cantidad" [max]="beer.stock" *ngIf="beer.stock" (cantidadMaxima)="cantidadMaxima($event)"></app-input-integer>
-                Cant:{{beer.cantidad}}
+                <app-input-integer [(cantidad)]="beer.cantidad" [max]="beer.stock" *ngIf="beer.stock"
+                    (cantidadMaxima)="cantidadMaxima($event)"></app-input-integer>
+            </td>
+            <td>
+                <button class="btn btn-dark" (click)="addToCart(beer)">Agregar</button>
+
             </td>
         </tr>
     </tbody>

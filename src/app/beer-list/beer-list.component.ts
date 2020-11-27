@@ -49,5 +49,11 @@ export class BeerListComponent implements OnInit {
     alert(m);
   }
 
+  addToCart(beer): void {
+    this.cart.addToCart(beer);
+    beer.stock-=beer.cantidad;
+    beer.cantidad=0; 
+  }
+
 
 }

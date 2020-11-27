@@ -32,9 +32,7 @@ export class InputIntegerComponent implements OnInit {
       this.cantidadMaxima.emit("No hay más");
   }
 
-  // addToCart(beer): void {
-  //   this.cart.addToCart(beer);
-  // }
+  
 
   downCantidad(): void {
     if (this.cantidad > 0)
